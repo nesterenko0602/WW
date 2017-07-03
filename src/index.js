@@ -13,7 +13,8 @@ const store = configureStore({
     humidity: 0,
     temp: 0,
   },
-  loading: true,
+  loading: false,
+  fetchError: false,
 })
 
 render(

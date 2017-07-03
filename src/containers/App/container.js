@@ -9,6 +9,7 @@ const mapStateToProps = (state, props) => {
     city: state.city,
     forecast: state.forecast,
     loading: state.loading,
+    fetchError: state.fetchError,
   }
 }
 

@@ -3,6 +3,8 @@ import constants from '../constants'
 const rootReducer = (state, action) => {
   const {
     SET_CITY,
+    FETCH_DATA,
+    FETCH_ERROR,
   } = constants
 
   switch (action.type) {
@@ -11,6 +13,17 @@ const rootReducer = (state, action) => {
         ...state,
         city: action.payload,
         loading: true,
+        fetchError: false,
+      }
+    case FETCH_DATA:
+      return {
+        ...state,
+        ...action.payload,
+      }
+    case FETCH_ERROR:
+      return {
+        ...state,
+        fetchError: true,
       }
     default:
       return state
