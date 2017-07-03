@@ -10,6 +10,7 @@ const mapStateToProps = (state, props) => {
     forecast: state.forecast,
     loading: state.loading,
     fetchError: state.fetchError,
+    firstLoad: state.firstLoad,
   }
 }
 

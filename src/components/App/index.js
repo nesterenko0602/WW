@@ -6,6 +6,11 @@ import Header from '../Header'
 import './app.css'
 
 class App extends PureComponent {
+  componentDidMount() {
+    if (this.props.firstLoad && this.props.city) {
+      this.props.onSubmitCity(this.props.city)
+    }
+  }
   render() {
     return (
       <div className="app">

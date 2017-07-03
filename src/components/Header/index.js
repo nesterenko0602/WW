@@ -21,6 +21,7 @@ class Header extends PureComponent {
   }
   handleSubmit(event) {
     this.props.onSubmitCity(this.state.city)
+    localStorage.setItem('WeatherForecast__city', this.state.city)
     event.preventDefault()
   }
   render() {

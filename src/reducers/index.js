@@ -19,6 +19,7 @@ const rootReducer = (state, action) => {
       return {
         ...state,
         ...action.payload,
+        firstLoad: false,
       }
     case FETCH_ERROR:
       return {
