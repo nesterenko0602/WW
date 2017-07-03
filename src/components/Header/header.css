@@ -1,3 +1,8 @@
+::-webkit-input-placeholder {
+  color: white;
+  opacity: .5;
+}
+
 .header--loading {
   opacity: .7;
 }

@@ -23,6 +23,7 @@ class App extends PureComponent {
           forecast={this.props.forecast}
           loading={this.props.loading}
           fetchError={this.props.fetchError}
+          firstLoad={this.props.firstLoad}
         />
       </div>
     )

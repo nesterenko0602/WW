@@ -1,7 +1,7 @@
 :root {
   --bg-hot: #E55B5B;
   --bg-cold: #4D94E2;
-  --bg-color: transparent;
+  --bg-color: var(--bg-cold);
   --main-border-color: #e6ecf0;
   --text-color: #FFF;
   --main-font: -apple-system, BlinkMacSystemFont, sans-serif;

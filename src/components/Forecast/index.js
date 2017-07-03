@@ -18,13 +18,14 @@ class Forecast extends PureComponent {
       loading,
       fetchError,
       forecast,
+      firstLoad,
     } = this.props
     return (
       <section className="forecast">
         { fetchError
-          && <div className="forecast__message">Ошибка получения данных</div>
+          && <div className="forecast__message">Прогноз погоды для этого города не найден :(</div>
         }
-        { !loading && !fetchError
+        { !loading && !fetchError && !firstLoad
           && <div>
             <div className="forecast__tempWrapper">
               <div className="forecast__temp">{ forecast.temp }</div>
