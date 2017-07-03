@@ -1,0 +1,46 @@
+:root {
+  --bg-hot: #E55B5B;
+  --bg-cold: #4D94E2;
+  --bg-color: transparent;
+  --main-border-color: #e6ecf0;
+  --text-color: #FFF;
+}
+#root {
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto 0;
+  padding: 64px 32px;
+  box-sizing: border-box;
+
+  background-color: var(--bg-color);
+  transition: background-color .8s linear;
+}
+
+@media all and (min-width: 480px) {
+  body {
+    background-color: white;
+  }
+  .app {
+    width: 80%;
+    max-width: 700px;
+    height: 450px;
+    margin: 10% auto 0;
+    
+    border-radius: 5px;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,.4);
+  }
+}

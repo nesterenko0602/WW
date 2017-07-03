@@ -1,0 +1,40 @@
+.forecast {
+  width: 100%;
+  margin-top: 64px;
+  }
+  .forecast__tempWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .forecast__temp {
+    display: inline-block;
+    position: relative;
+    
+    padding: 0 16px;
+
+    font-size: 128px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .forecast__temp::after {
+      content: '°';
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+  .forecast__metaWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    
+    font-weight: 100;
+    font-size: 14px;
+    }
+    .forecast__metaLabel {
+      opacity: 0.7;
+      padding-right: 4px;
+    }

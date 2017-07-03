@@ -1,0 +1,9 @@
+.loader {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  text-align: center;
+  }
+  .loader svg path, .loader svg rect {
+    fill: #FFF;
+  }

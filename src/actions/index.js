@@ -19,7 +19,6 @@ export const setCity = (city) => dispatch => {
     .then(results => {
       // F to C
       const celsiusTemp = Math.round(5.0/9 * (Number(results.item.condition.temp) - 32))
-
       dispatch({
         type: FETCH_DATA,
         payload: {
@@ -28,6 +27,7 @@ export const setCity = (city) => dispatch => {
             humidity: results.atmosphere.humidity,
             temp: celsiusTemp,
           },
+          city: results.location.city,
           loading: false,
         },
       })

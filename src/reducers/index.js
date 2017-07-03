@@ -25,6 +25,7 @@ const rootReducer = (state, action) => {
       return {
         ...state,
         fetchError: true,
+        loading: false,
       }
     default:
       return state

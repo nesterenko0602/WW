@@ -14,8 +14,16 @@ class App extends PureComponent {
   render() {
     return (
       <div className="app">
-        <Header city={this.props.city} onSubmitCity={this.props.onSubmitCity} loading={this.props.loading} />
-        <Forecast forecast={this.props.forecast} loading={this.props.loading} />
+        <Header
+          city={this.props.city}
+          onSubmitCity={this.props.onSubmitCity}
+          loading={this.props.loading}
+        />
+        <Forecast
+          forecast={this.props.forecast}
+          loading={this.props.loading}
+          fetchError={this.props.fetchError}
+        />
       </div>
     )
   }
