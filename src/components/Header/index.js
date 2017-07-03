@@ -31,7 +31,7 @@ class Header extends PureComponent {
         <form className="header__form" onSubmit={this.handleSubmit}>
           <input className="header__input" type="text"
             ref={(input) => { this.textInput = input }}
-            placeholder="Введите город"
+            placeholder="Enter city"
           />
         </form>
       </header>
