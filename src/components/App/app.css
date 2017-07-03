@@ -4,6 +4,7 @@
   --bg-color: transparent;
   --main-border-color: #e6ecf0;
   --text-color: #FFF;
+  --main-font: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 #root {
   height: 100%;
@@ -16,7 +17,7 @@ body {
   margin: 0;
   
   color: var(--text-color);
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--main-font);
 }
 .app {
   position: relative;
