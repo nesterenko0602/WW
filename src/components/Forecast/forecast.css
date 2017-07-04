@@ -38,9 +38,3 @@
       opacity: 0.7;
       padding-right: 4px;
     }
-  .forecast__message {
-    font-family: var(--main-font);
-    font-weight: 200;
-    font-size: 24px;
-    text-align: center;
-  }

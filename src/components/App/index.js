@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 
 import Forecast from '../Forecast'
 import Header from '../Header'
+import Error from '../Error'
 
 import './app.css'
 
@@ -11,20 +12,38 @@ class App extends PureComponent {
       this.props.onSubmitCity(this.props.city)
     }
   }
+  componentDidUpdate() {
+    const htmlStyles = window.getComputedStyle(document.body)
+    document.documentElement.style.setProperty(
+      '--bg-color',
+      this.props.forecast.temp >= 20
+        ? htmlStyles.getPropertyValue("--bg-hot")
+        : htmlStyles.getPropertyValue("--bg-cold")
+    )
+  }
   render() {
+    const {
+      city,
+      loading,
+      firstLoad,
+      forecast,
+      fetchError,
+      onSubmitCity,
+    } = this.props
+
     return (
       <div className="app">
         <Header
-          city={this.props.city}
-          onSubmitCity={this.props.onSubmitCity}
-          loading={this.props.loading}
+          city={city}
+          onSubmitCity={onSubmitCity}
+          loading={loading}
         />
-        <Forecast
-          forecast={this.props.forecast}
-          loading={this.props.loading}
-          fetchError={this.props.fetchError}
-          firstLoad={this.props.firstLoad}
-        />
+        { fetchError
+            && <Error />
+        }
+        { !fetchError && !firstLoad && !loading
+            && <Forecast forecast={forecast} />
+        }
       </div>
     )
   }
